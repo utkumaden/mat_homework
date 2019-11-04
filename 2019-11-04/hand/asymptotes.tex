@@ -1,0 +1,68 @@
+\subsection{Asymptotes}
+
+Since the function is continuous on \(\mathbb{R}\), no vertical asymptotes
+exist.
+
+Also since this function only consists of the product of a polynomial 
+and a exponential function, no slant asymptote exists.
+
+For horizontal asymptotes we will evaluate 
+\(\lim_{x \rightarrow \pm\infty} {x^2\cdot e^x}\).
+
+\[
+    \begin{aligned}
+        \lim_{x\rightarrow +\infty} {x^2 \cdot e^x} &
+        = \lim_{x\rightarrow +\infty} {x^2} \cdot 
+          \lim_{x\rightarrow +\infty} {e^x} \\
+        & = \lim_{x\rightarrow +\infty} \infty \cdot \infty \\
+        & = +\infty
+    \end{aligned}
+\]
+
+Thus, no horizontal asymptote exists in the positive direction.
+
+\paragraph{The Asymptote}
+\[
+    \lim_{x\rightarrow -\infty} {x^2 \cdot e^x}
+    = lim_{x\rightarrow -\infty} {\infty\cdot 0}
+\]
+
+We must use the L'Hospital Rule to solve this indeterminity.
+
+\[
+    \begin{aligned}
+        \lim_{x\rightarrow -\infty} {x^2 \cdot e^x} &
+        = \lim_{x\rightarrow -\infty} \frac{x^2}{e^{-x}} \\
+        & = \lim_{x\rightarrow -\infty} 
+                \frac{ {d(x^2)} / {dx}}
+                     { {d(e^{-x})} / {dx}} \\
+        & = \lim_{x\rightarrow -\infty}
+                \frac{ 2x }
+                     { -e^{-x} } \\
+        & = \lim_{x\rightarrow -\infty}
+                \frac{-\infty}{-\infty}
+    \end{aligned}
+\]
+
+Again this results in a condition we must use L'Hospital Rule to resolve.
+
+\[
+    \begin{aligned}
+        \lim_{x\rightarrow -\infty} {x^2 \cdot e^x} &
+        = \lim_{x\rightarrow -\infty}
+                \frac{ 2x }
+                     { -e^{-x} } \\
+        & = \lim_{x\rightarrow -\infty}
+                 \frac{d(2x)/dx}
+                      {d(-e^{-x})/dx} \\
+        & = \lim_{x\rightarrow -\infty}
+                 \frac{2}
+                      {e^{-x}} \\
+        & = \lim_{x\rightarrow -\infty}
+                \frac{2}
+                     {\infty} \\
+        & = 0
+    \end{aligned}
+\]
+
+Thus, there is an asymptote in the negative direction at \(y = 0\)
