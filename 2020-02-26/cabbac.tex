@@ -1,0 +1,103 @@
+\section{Proof of $\vec{a}\times(\vec{b}\times\vec{c}) = (\vec{c}\cdot\vec{a})\vec{b} - (\vec{b}\cdot\vec{a})\vec{c}$}
+
+Let $\vec{a}$, $\vec{b}$, $\vec{c}$ be three dimentional vectors where
+
+\[
+    \vec{a} = \begin{vmatrix}
+        p \\
+        q \\
+        r 
+    \end{vmatrix} \;
+    \vec{b} = \begin{vmatrix}
+        s \\
+        t \\
+        u
+    \end{vmatrix} \;
+    \vec{c} = \begin{vmatrix}
+        x \\
+        y \\
+        z
+    \end{vmatrix}
+\]
+
+hence
+
+\[
+    \vec{b}\times\vec{c} = \det\begin{vmatrix}
+        \vec{i} & \vec{j} & \vec{k} \\
+        s & t & u \\
+        x & y & z
+    \end{vmatrix} = \vec{i}(tz-uy) + \vec{j}(ux-sz) + \vec{k}(sy-tx) = \begin{vmatrix}
+        tz - uy \\
+        ux - sz \\
+        sy - tx
+    \end{vmatrix} = \begin{vmatrix}
+        \alpha \\
+        \beta \\
+        \gamma
+    \end{vmatrix}
+\]
+
+Thus
+
+\[
+    \vec{a}\times(\vec{b}\times\vec{c}) = \vec{a}\times\begin{vmatrix}
+        \alpha \\
+        \beta \\
+        \gamma
+    \end{vmatrix} = \det\begin{vmatrix}
+        \vec{i} & \vec{j} & \vec{k} \\
+        p & q & r \\
+        \alpha & \beta & \gamma
+    \end{vmatrix} = \vec{i}(q\gamma - r\beta) + \vec{j}(r\alpha - p\gamma) + \vec{k}(p\beta - q\alpha) =
+    \begin{vmatrix}
+        q\gamma - r\beta \\
+        r\alpha - p\gamma \\
+        p\beta - q\alpha
+    \end{vmatrix}
+\]
+
+Now working on the right hand side of the equation,
+
+\[
+\begin{aligned}
+    \vec{a}\cdot\vec{b} & = ps + qt + ru \\
+    \vec{a}\cdot\vec{c} & = px + qy + rz
+\end{aligned}
+\]
+
+\[
+    (\vec{a}\cdot\vec{c})\vec{b} - (\vec{a}\cdot\vec{b})\vec{c} = (px + qy + rz)\begin{vmatrix}
+        s \\
+        t \\
+        u
+    \end{vmatrix} - (ps + qt + ru)\begin{vmatrix}
+        x \\
+        y \\
+        z
+    \end{vmatrix} = \begin{vmatrix}
+        psx + qsy + rsz \\
+        ptx + qty + rtz \\
+        pux + quy + ruz
+    \end{vmatrix} - \begin{vmatrix}
+        psx + qtx + rux \\
+        psy + qty + ruy \\
+        psz + qtz + ruz
+    \end{vmatrix}
+\]
+
+\[
+    = \begin{vmatrix}      
+        qsy + rsz - qtx - rux \\
+        ptx + rtz - psy - ruy \\
+        pux + quy - psz - qtz
+    \end{vmatrix} = \begin{vmatrix}
+        q (sy - tx) - r (ru - sz) \\
+        r (tz - uy) - p (sy - tx)  \\
+        p (ux - sz) - q (tz - uy)
+    \end{vmatrix} = \begin{vmatrix}
+        q\gamma - r\beta \\
+        r\alpha - p\gamma \\
+        p\beta - q\alpha
+    \end{vmatrix} = \vec{a}\times(\vec{b}\times\vec{c})
+\]

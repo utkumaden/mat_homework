@@ -1,0 +1,77 @@
+\section{Proof of 
+$\lvert\vec{a}\times\vec{b}\rvert^2 = 
+\lvert\vec{a}\rvert^2
+\lvert\vec{b}\rvert^2
+- (\vec{a}\cdot\vec{b})^2
+$
+}
+
+Let $\vec{a}$, $\vec{b}$ be two three dimensional vectors where
+
+\[
+    \vec{a} = \begin{vmatrix}
+        p \\ q \\ r
+    \end{vmatrix} \;
+    \vec{b} = \begin{vmatrix}
+        x \\ y \\ z
+    \end{vmatrix}
+\]
+
+Therefore
+\[
+\begin{aligned}
+    \lvert\vec{a}\rvert & = \sqrt{p^2 + q^2 + r^2} \\
+    \lvert\vec{b}\rvert & = \sqrt{x^2 + y^2 + z^2} \\
+    \vec{a}\cdot\vec{b} & = px + qy + rz \\
+    \vec{a}\times\vec{b} & = \det\begin{vmatrix}
+        \vec{i} & \vec{j} & \vec{k} \\
+        p & q & r \\
+        x & y & z
+    \end{vmatrix} = \vec{i}(qz - ry) + \vec{j}(rx - pz) + \vec{k}(py - qx) = \begin{vmatrix}
+        qz - ry \\
+        rx - pz \\
+        py - qx 
+    \end{vmatrix} \\
+    \lvert\vec{a}\times\vec{b}\lvert & = \sqrt{(qz - ry)^2  + (rx - pz)^2 + (py - qx)^2}
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+    \lvert\vec{a}\rvert^2 & = {p^2 + q^2 + r^2} \\
+    \lvert\vec{b}\rvert^2 & = {x^2 + y^2 + z^2} \\
+    \lvert\vec{a}\times\vec{b}\lvert^2 & = {(qz - ry)^2  + (rx - pz)^2 + (py - qx)^2} \\
+    & = q^2z^2 -2qrzy + r^2y^2 + r^2x^2x - 2rpxz + p^2z^2 + p^2y^2 - 2pqxy + q^2x^2 \\
+    (\vec{a}\cdot\vec{b})^2 & = (px + qy + rz)^2 = p^2x^2 + 2pxqy + 2pxrz + q^2y^2 + 2qyrz + r^2z^2
+\end{aligned}
+\]
+
+If
+
+\[
+\lvert\vec{a}\times\vec{b}\rvert^2 = \lvert\vec{a}\rvert^2\lvert\vec{b}\rvert^2- (\vec{a}\cdot\vec{b})^2 \\
+\]
+
+\begin{multline*}
+    q^2z^2 -2qrzy + r^2y^2 + r^2x^2x - 2rpxz + p^2z^2 + p^2y^2 - 2pqxy + q^2x^2 \\ 
+    = \\
+    (p^2 + q^2 + r^2)(x^2 + y^2 + z^2) - p^2x^2 - 2pxqy - 2pxrz - q^2y^2 - 2qyrz - r^2z^2
+\end{multline*}
+
+\begin{multline*}
+    q^2z^2 + r^2y^2 + r^2x^2 + p^2z^2 + p^2y^2 + q^2x^2 \\ 
+    = \\
+    (p^2 + q^2 + r^2)(x^2 + y^2 + z^2) - p^2x^2 - q^2y^2 - r^2z^2
+\end{multline*}
+
+\begin{multline*}
+    q^2z^2 + r^2y^2 + r^2x^2 + p^2z^2 + p^2y^2 + q^2x^2 + p^2x^2 + q^2y^2 + r^2z^2 \\
+    = \\
+    p^2x^2 + p^2y^2 + p^2z^2 + q^2x^2 + q^2y^2 + q^2z^2 + r^2x^2 + r^2y^2 + r^2z^2 % (p^2 + q^2 + r^2)(x^2 + y^2 + z^2)
+\end{multline*}
+
+\[
+    0 = 0
+\]
+
+Hence the equation holds.
